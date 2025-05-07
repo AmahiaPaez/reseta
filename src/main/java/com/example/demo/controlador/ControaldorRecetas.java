@@ -28,7 +28,7 @@ public class ControaldorRecetas {
     public String obtenerTodasLasRecetas(Model model) {
     	System.out.println("aaaaa");
         model.addAttribute("listaRecetas", listaRecetas);
-        return "index";
+        return "index.jsp";
     }
 
     @GetMapping("/recetas/{nombre}")
@@ -39,6 +39,6 @@ public class ControaldorRecetas {
         } else {
             model.addAttribute("error", "La receta no se encuentra en nuestra lista.");
         }
-        return "detalleReceta";
+        return "detalleReceta.jsp";
     }
 }
